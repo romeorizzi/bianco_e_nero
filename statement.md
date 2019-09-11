@@ -74,7 +74,7 @@ Con un'ulteriore operazione di taglia e cuci riusciamo ora ad ottenenere una con
 
 # INTERFACE (gestione input/output) #
 
-Per quanto riguarda la presente versione TuringArena del roblema, si guardi il file interface.txt(public/interface.txt) e/o si parta direttamente a completare il template di soluzione per il linguaggio da voi prescelto ( C(public/template.c), C(public/template.cpp), Python(public/template.py), Rust (public/template.rs), Java (public/template.java) ). Sono tutti file che, in generale, puoi ottenere dalla pagina del problema.
+Per quanto riguarda la presente versione TuringArena del problema, si guardi il file interface.txt(public/interface.txt) e/o si parta direttamente a completare il template di soluzione per il linguaggio da voi prescelto tra quelli attualmente supportati (al momento, [C](public/template.c), [c++](public/template.cpp), [Python](public/template.py), [Rust](public/template.rs), e [Java](public/template.java)). Sono tutti file che, in generale, puoi ottenere dalla pagina del problema.
 In molti casi, come in questo, risultano autoesplicativi sui formati della consegna.
 
 La versione CMS richiedeva invece di effettuare input e output via file, doveva quindi specificare i formati e proseguire precisando varie assunzioni, come ora richiamato nel proseguio di questa pagina per meglio consentire un confronto.

@@ -1,5 +1,5 @@
-def necklace(n, input_necklace_colors, move):
-
+def necklace(n, input_necklace_colors, reverse_interval):
+    
     def num_breakpoints(necklace_colors):
         risp = 0
         if necklace_colors[len(necklace_colors)-1] != necklace_colors[0]:
@@ -53,7 +53,7 @@ def necklace(n, input_necklace_colors, move):
         pos3 = pos2 + 1
         while current_necklace_colors[pos3] == current_necklace_colors[pos3-1]:
             pos3 += 1
-        move(current_necklace_names[pos1],current_necklace_names[pos3-1])
+        reverse_interval(current_necklace_names[pos1],current_necklace_names[pos3-1])
         perform_move_in_local(current_necklace_names[pos1],current_necklace_names[pos3-1])
 
     return num_needed_moves

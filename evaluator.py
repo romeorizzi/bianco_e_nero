@@ -20,8 +20,8 @@ def evaluate_testcase(input_necklace_colors):
     current_necklace_names = list(range(1,n+1))
     pos_of_bead = [None]+list(range(n))    
 
-    def cut_and_paste(a_name,b_name):
-        #print(f"Evaluator cut_and_paste(a_name={a_name},b_name={b_name})")
+    def reverse_integral(a_name,b_name):
+        #print(f"Evaluator reverse_integral(a_name={a_name},b_name={b_name})")
 
         nonlocal current_necklace_colors, current_necklace_names, pos_of_bead
         def swap(a_pos,b_pos):
@@ -49,28 +49,28 @@ def evaluate_testcase(input_necklace_colors):
                 finished = True
                 
     try:
-        def move(a_name, b_name):
+        def reverse_interval(a_name, b_name):
             nonlocal num_made_moves, n
-#            print(f"move(a = {a_name}, b={b_name}) called.")
+            #print(f"reverse_interval(a = {a_name}, b={b_name}) called.")
             if a_name < 0 or a_name > n or b_name < 0 or b_name > n:
-                print(f"WRONG: The call move(a = {a_name}, b={b_name}) is not valid.")
+                print(f"WRONG: The call reverse_interval(a = {a_name}, b={b_name}) is not valid.")
                 ta.goals.setdefault("solve_in_any_number_of_moves", False)
                 ta.goals.setdefault("at_most_n2_moves", False)
                 ta.goals.setdefault("opt_solve", False)
                 ta.goals.setdefault("linear_time", False)
             else:
                 num_made_moves += 1
-                cut_and_paste(a_name,b_name)
+                reverse_integral(a_name,b_name)
 
         #expected_answer = (num_breakpoints(input_necklace_colors)-2)/2
         with ta.run_algorithm("solutions/only_num_moves_correct.c") as p:
-            expected_answer = p.functions.necklace(len(input_necklace), input_necklace, callbacks=[move])
+            expected_answer = p.functions.necklace(len(input_necklace), input_necklace, callbacks=[reverse_interval])
 
         # print(f"The reference solution says that the minimum number of moves is {expected_answer}")
         
         num_made_moves = 0
         with ta.run_algorithm(ta.submission.source) as p:
-            obtained_answer = p.functions.necklace(len(input_necklace), input_necklace, callbacks=[move])
+            obtained_answer = p.functions.necklace(len(input_necklace), input_necklace, callbacks=[reverse_interval])
     except ta.AlgorithmError as e:
         print(f" error: {e}")
         ta.goals.setdefault("correct_num_moves", False)
