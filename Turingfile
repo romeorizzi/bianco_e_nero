@@ -1,0 +1,6 @@
+[problem]
+title = "bianco_e_nero"
+
+[scoring]
+goals = ["correct_num_moves", "solve_in_any_number_of_moves", "opt_solve", "linear_time"]
+

@@ -1,0 +1,47 @@
+	<p>Vi viene data una collana costituita da <tt>N</tt> perline bianche e nere. Ogni perlina porta impresso un numero intero da 1 a <tt>N</tt>; all&#8217;inizio, leggendo i numeri delle perline in senso orario, essi compaiono consecutivamente, cioè la perlina 1 è seguita dalla perlina 2, che è seguita dalla perlina 3 eccetera. (Naturalmente, quindi, la perlina <tt>N</tt> è seguita dalla perlina 1).</p>
+<p>Un esempio di collana è mostrato nella <em>Figura 1</em>.</p>
+<div class="indent" style="text-align: center;"><img class="size-full wp-image-7667 aligncenter" src="http://www.valcon.it/c/wp-content/uploads/oii_2002_nero1.png" alt="oii_2002_nero1" width="225" height="222" />Figura 1.<br />
+Un esempio di collana con 9 perline.</div>
+<p>Il vostro obiettivo è di riordinare le perline in modo tale che alla fine le perline dello stesso colore compaiano consecutivamente, cioè tutte le perline bianche compaiano senza interruzioni, e così pure le perline nere.<br />
+Non è importante invece quale sia l&#8217;ordine numerico delle perline alla fine.</p>
+<p>Per riordinare le perline avete a disposizione un solo tipo di operazione, detto taglia e cuci.<br />
+Questa operazione consiste nel tagliare un segmento della collana e nel riincollarlo nella stessa posizione ma in senso inverso.</p>
+<div class="indent" style="text-align: center;"><img class="aligncenter size-full wp-image-7668" src="http://www.valcon.it/c/wp-content/uploads/oii_2002_nero2.png" alt="oii_2002_nero2" width="225" height="222" />Figura 2.<br />
+La collana di Figura 1 dopo un taglia e cuci del segmento compreso fra 9 e 2.</div>
+<div class="indent" style="text-align: center;"><img class="aligncenter size-full wp-image-7669" src="http://www.valcon.it/c/wp-content/uploads/oii_2002_nero3.png" alt="oii_2002_nero3" width="225" height="228" />Figura 3.<br />
+La collana di Figura 2 dopo un taglia e cuci del segmento compreso fra 1 e 5.</div>
+<h3>Dati in input</h3>
+<p>Il file di input, di nome <tt>input.txt</tt>, contiene due righe.</p>
+<ul>
+<li>Sulla prima riga compare il singolo intero <tt>N</tt>.</li>
+<li>Sulla seconda riga compaiono esattamente <tt>N</tt> caratteri, ciascuno dei quali è una <tt>B</tt> oppure una <tt>N</tt>.<br />
+In particolare, l&#8217;<tt>i</tt>-esimo carattere indica il colore della perlina numero <tt>i</tt> (<tt>B</tt> sta per <em>bianco</em> mentre <tt>N</tt> sta per <em>nero</em>).</li>
+</ul>
+<h3>Dati in output</h3>
+<p>Il file di output, di nome <tt>output.txt</tt>, contiene la sequenza di operazioni taglia e cuci da effettuare per riordinare correttamente le perline.<br />
+Ciascuna riga è costituita da due numeri interi (separati da uno spazio), che sono il numero della prima e dell&#8217;ultima (in senso orario) perlina del segmento che viene tagliato e riincollato.</p>
+<h3>Assunzioni</h3>
+<ul>
+<li>il tempo limite di esecuzione è fissato in 2 secondi;</li>
+<li><tt>1 &lt;= N &lt;= 1000</tt>;</li>
+<li>la collana potrebbe contenere anche perline tutte dello stesso colore (in questo caso, il file di output dovrebbe essere vuoto).</li>
+</ul>
+<h3>Esempio</h3>
+<div class="indent">
+<table class="data">
+<tbody>
+<tr>
+<th>input.txt</th>
+<th>output.txt</th>
+</tr>
+<tr>
+<td><tt>9<br />
+NBNNBNBBN</tt></td>
+<td><tt>9 2<br />
+1 5</tt></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>L&#8217;esempio è quello mostrato in <em>Figura 1</em>.<br />
+La sequenza di operazioni indicata nel file di output è quella indicata nelle <em>Figure 2</em> e <em>3</em>.</p>

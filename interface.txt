@@ -1,0 +1,14 @@
+function necklace(n, c[]) callbacks {
+    procedure move(a, b);
+}
+
+main {
+    read n;
+    for i to n {
+        read c[i];
+    }
+
+    call min_mosse = necklace(n, c);
+
+    write min_mosse;
+}
