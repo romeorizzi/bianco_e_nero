@@ -55,6 +55,7 @@ def evaluate_testcase(input_necklace_colors):
             if a_name < 0 or a_name > n or b_name < 0 or b_name > n:
                 print(f"WRONG: The call move(a = {a_name}, b={b_name}) is not valid.")
                 ta.goals.setdefault("solve_in_any_number_of_moves", False)
+                ta.goals.setdefault("at_most_n2_moves", False)
                 ta.goals.setdefault("opt_solve", False)
                 ta.goals.setdefault("linear_time", False)
             else:
@@ -74,6 +75,7 @@ def evaluate_testcase(input_necklace_colors):
         print(f" error: {e}")
         ta.goals.setdefault("correct_num_moves", False)
         ta.goals.setdefault("solve_in_any_number_of_moves", False)
+        ta.goals.setdefault("at_most_n2_moves", False)
         ta.goals.setdefault("opt_solve", False)
         ta.goals.setdefault("linear_time", False)
         
@@ -87,6 +89,7 @@ def evaluate_testcase(input_necklace_colors):
 
     if num_breakpoints(current_necklace_colors) > 2:
         ta.goals.setdefault("solve_in_any_number_of_moves", False)
+        ta.goals.setdefault("at_most_n2_moves", False)
         ta.goals.setdefault("opt_solve", False)
         ta.goals.setdefault("linear_time", False)
         if num_made_moves == 0:
@@ -98,6 +101,11 @@ def evaluate_testcase(input_necklace_colors):
             print(f"Correct: your procedure fully solved the necklace.")
         else:
             print(f"Correct: no move was needed and no move was done by your code.")
+
+    if num_made_moves > n*n:
+        print(f"But used quite a lot of moves.")
+        ta.goals.setdefault("at_most_n2_moves", False)
+        ta.goals.setdefault("linear_time", False)
 
     if int(p.time_usage * 1000000) > 2000:
         print(f"Your procedure is too slow. There exists a linear time solution to this problem.")
@@ -111,6 +119,7 @@ for n in [6,10,20,50,100,200]:
 
 ta.goals.setdefault("correct_num_moves", True)
 ta.goals.setdefault("solve_in_any_number_of_moves", True)
+ta.goals.setdefault("at_most_n2_moves", True)
 ta.goals.setdefault("opt_solve", True)
 ta.goals.setdefault("linear_time", True)
 print(ta.goals)
