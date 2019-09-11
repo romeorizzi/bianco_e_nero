@@ -3,7 +3,7 @@
 Questo problema dimostrativo è una riproposizione del problema "bianco e nero" delle OII 2002.
 
 Trovi [versione originale](http://www.valcon.it/c/bianco-e-nero/ "versione originale del testo del problema bianco e nero nell'archivio valcon")
-del testo nell'[archivio valcon](http://www.valcon.it/c/oii/ "archivio valcon, contiene molti materiali didattici" che contiene ben collocati materiali didattici relativi alla olimpiadi ed alla programmazione in generale. (Visita consigliata.)
+del testo nell'[archivio valcon](http://www.valcon.it/c/oii/ "archivio valcon, contiene molti materiali didattici") che contiene ben collocati materiali didattici relativi alla olimpiadi ed alla programmazione in generale. (Visita consigliata.)
 Altrimenti, in caso di rottura dei link,
 trovi il testo originale a [questo link interno](public/bianco-e-nero_testo-originale.html "copia in locale del testo originale del problema bianco e nero").
 
@@ -31,7 +31,7 @@ Vi viene data una collana costituita da&nbsp;$N$ perline bianche e nere. Ogni pe
 Ecco un esempio di collana di $N=9$ perline.
 
 <center>
-<IMG align="center" SRC="public/figs/oii_2002_nero1.png" width="90%" height="90%">
+<IMG align="center" SRC="public/figs/oii_2002_nero1.png" width="40%" height="40%">
 </center>
 
 <!---
